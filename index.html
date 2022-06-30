@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Andy's Li Website</title>
+     <script src="script.js" defer></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e5e475af0a.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+<section class="header">
+  <nav>
+      <a href="index.html"><img src="blue.png"></a>
+    <div class="nav-links" id="navLinks">
+      <i class="fa fa-times" onclick="hideMenu()"></i>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="youtube.html">YOUTUBE</a></li>
+        <li><a href="reddit.html">REDDIT</a></li>
+        <li><a href="">SHOP</a></li>
+        <li><a href="">MORE INFO</a></li>
+        
+      </ul>
+    </div>
+    <i class="fa fa-bars" onclick="showMenu()"></i>
+  </nav>
+<div class="text-box">
+  <h1> Andy's Li </h1>
+  <p>Welcome, this website was made to help provide information for everyone to see and share</p>
+  <a href="" class="hero-btn">Visit to know more about why this website was made</a>
+</div>
+
+</section>
+<!----About Section ---->
+
+<section class="about">
+<h1>Categories</h1>
+<!-- <p>Hi I'm Andy and these are a combination of projects I made / a sharing device for you</p> -->
+
+<div class="row">
+  <div class="about-col">
+    <h3>Youtube</h3>
+    <p>I've always wanted to share the videos I've watched because I find them helpful /
+      entertaining. I'll be sharing anything ranging from finance to music :) </p>
+  </div>
+  <div class="about-col">
+    <h3>Reddit</h3>
+    <p>Reddit has helped me know the general to investing and I hope to share some Info
+      <i>I wish I knew sooner</i> (not rlly but it makes it sound more important)</p>
+  </div>
+  <div class="about-col">
+    <h3>Shop</h3>
+    <p>This is something I just added, I want to try to sell my whole closet / atleast most of it,
+       then the rest goes to GoodWill or the Prop Shop </p>
+  </div>
+  <div class="about-col">
+    <h3>Links</h3>
+    <p>Mostly all the links: I will provide links I've yet to share on this website, 
+      I think. If not then it'll just be a "more info" page</p>
+  </div>
+</div>
+
+</section>
+
+<!-- Youtube -->
+
+<section class="youtube">
+  <h1>Youtube</h1>
+  <!-- <p>I've always wanted to share the videos I've watched because I find them helpful /
+    entertaining. I'll be sharing anything ranging from finance to music :) </p> -->
+
+  <div class="row">
+    <div class="youtube-col">
+      <img src="image_part_001.jpg">
+      <div class="layer">
+        <h3>Lofi</h3>
+      </div>
+    </div>
+    <div class="youtube-col">
+      <img src="image_part_002.jpg">
+      <div class="layer">
+        <h3>Finance</h3>
+      </div>
+    </div>
+    <div class="youtube-col">
+      <img src="image_part_003.jpg">
+      <div class="layer">
+        <h3>Mix</h3>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!------ Java Script for toggle Menu ----->
+
+<script>
+var navLinks = document.getElementById("navLinks");
+function showMenu(){
+  navLinks.style.display="inline-block";
+  navLinks.style.right = "0";
+
+}
+function hideMenu(){
+  navLinks.style.right = "-200px";
+  navLinks.style.display="none";
+}
+</script>
+
+</body>
+</html>
