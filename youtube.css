@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+.container .top-content .fa {
+    display: none;
+}
+input {
+    display: none;
+}
+.container {
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 35px;
+    /* padding: 1em; */
+    margin: 75px 0;
+    position: relative;
+}
+h1::before {
+    content: '';
+    position:absolute;
+    width: 100px;
+    height: 3px;
+    background-color: crimson;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0% {
+        width: 100px;
+    }
+    50%{
+        width:200px;
+    }
+    100% {
+        width:100px;
+    }
+}
+.top-content, .left-side, .random-class {
+    background-color: lightcoral;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 5px lightgray; */
+
+}
+.left-side, .random-class {
+    margin: 20px auto 20px 10px;
+}
+.top-content h3 {
+    height: 100%;
+    background-color: lightgrey;
+    line-height: 60px;
+    padding: 0 25px;
+}
+label {
+    display: inline-block;
+    height: 100%;
+    margin: 0px 10px;
+    line-height: 60px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    transition: 0.5s;
+}
+label:hover {
+    background-color:lightgray;
+    padding: 1px;
+    border-radius: 10px;
+}
+.youtube-gallery p {
+    background-color: lightblue;
+    margin: 5px
+}
+.youtube-gallery p:hover {
+    cursor: default;
+}
+@media only screen and (min-device-width : 768px)   
+and (max-device-width : 1605px)  {
+    .youtube-gallery {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 80px 5px;
+    }
+    .youtube {
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightgray;
+    cursor: pointer;
+    }
+    .youtube iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .5s;
+    }
+    .youtube-gallery .youtube {
+        margin: 20px;
+    }
+    footer {
+        margin: 50px;
+        background-color: white;
+    }
+}
+#check1:checked ~ .container .youtube-gallery .youtube {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+}
+#check2:checked ~ .container .youtube-gallery .lofi {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    transition: .5s;
+}
+#check2:checked ~ .container .youtube-gallery .finance, 
+#check2:checked ~ .container .youtube-gallery .random{
+    opacity: 0;
+    transform:scale(0);
+    position: absolute;
+    transition: 0.5s;
+}
+#check3:checked ~ .container .youtube-gallery .finance {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    transition: .5s;
+}
+#check3:checked ~ .container .youtube-gallery .lofi,
+#check3:checked ~ .container .youtube-gallery .random {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0.5s;
+}
+#check4:checked ~ .container .youtube-gallery .random {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    transition: .5s;
+}
+#check4:checked ~ .container .youtube-gallery .lofi,
+#check4:checked ~ .container .youtube-gallery .finance {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 750px){
+    .top-content h3 {
+    display:inline-block;
+    font-size: 20px;
+    line-height: 110%;
+    padding: 7px;
+    }
+    label {
+        line-height: 110%;
+        height: auto;
+        padding: 1px;
+        margin: 1px;
+    }
+    footer {
+        margin: 25px;
+        background-color: white;
+    }
+    .top-content .left-side .fa {
+        display:block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .container .top-content .fa-arrow-right, .fa-arrow-left {
+        display: block;
+        font-size: 27px;
+    }
+    .right-side {
+        display:none;
+    }
+    
+}  
+
+/* .youtube-list {
+    background-color: yellow;
+   
+} */
+.card {
+    background-color: red;
+    padding: 1em;
+    max-width: 700px;
+    display: inline-block;
+    border-radius: 100px;
+}
+.card h3 {
+    padding: 3vh;
+    border-radius: 10px;
+
+}
+/* iframe {
+    max-width: 100%;
+    align-content: center;
+    border-style:none;
+} */
+/* @media(max-width:768px){
+    .card {
+        float:left;
+        width:90%;
+margin-right:5px;
+    }
+} */
