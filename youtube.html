@@ -5,8 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy's Li • Youtube</title>
+    <link href="youtube.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e5e475af0a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <input type="radio" name="Photos" id="check1" checked>
+    <input type="radio" name="Photos" id="check2">
+    <input type="radio" name="Photos" id="check3">
+    <input type="radio" name="Photos" id="check4">
+
+    <div class="container">
+        <h1>Y O U T U B E</h1>
+        <div class="top-content" id="topContent">
+            <h3>Youtube Gallery</h3>
+            <i class ="fa fa-arrow-left" onClick="leftScroll()" id="leftArrow"></i>
+            <div class="left-side" id="leftSide">
+            <label for="check1">All Videos</label>
+            <label for="check2">Lofi / Music</label>
+            <label for="check3">Finance Videos</label>
+             </div>
+            <i class="fa fa-arrow-right" onClick="rightScroll()" id="rightArrow"></i>
+            <div class="right-side" id="rightSide">
+            <label class="random-class" for="check4">Random</label>
+            </div>
+        </div>
+        <!--Card-->
+    <div class="youtube-gallery">
+        <div class="youtube random">
+            <h3>Random</h3>
+            <iframe src="https://www.youtube.com/embed/U-CujW5OlW0" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+             encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>How this page was made</p>
+        </div>
+        <!--Card-->
+        <div class="youtube lofi">
+            <h3>Lofi</h3>
+            <iframe src="https://www.youtube.com/embed/n_nQrq0itAQ" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Cool anime background</p>
+        </div> 
+        <!--card-->
+        <div class="youtube lofi">
+            <h3>Lofi</h3>
+            <iframe src="https://www.youtube.com/embed/GgVcgbtHY9k"frameborder="0" allowfullscreen></iframe>
+            <p>Amazing Animation & Song</p>
+        </div>
+        <!--Card-->
+        <div class="youtube random">
+            <h3>Random</h3>
+            <iframe src="https://www.youtube.com/embed/w1yIREyw7Q0" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>How to make a product card, didn't rlly work for me :(</p>
+        </div>
+        <div class="youtube finance">
+            <h3>Finance</h3>
+            <iframe src="https://www.youtube.com/embed/aZkWgwcJ5mw"
+             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+             encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Inflation</p>
+        </div>
+        <!--Card-->
+        <div class="youtube random">
+            <h3>Random</h3>
+            <iframe src="https://www.youtube.com/embed/U-CujW5OlW0" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+             encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>How this page was made</p>
+        </div>
+        <!--Card-->
+        <div class="youtube random">
+            <h3>Random</h3>
+            <iframe src="https://www.youtube.com/embed/U-CujW5OlW0" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+             encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>How this page was made</p>
+        </div>
+        <!--Card-->
+        <div class="youtube random">
+            <h3>Random</h3>
+            <iframe src="https://www.youtube.com/embed/U-CujW5OlW0" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+             encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>How this page was made</p>
+        </div>
+        <!--Card-->
+    </div>    
+    </div>
+
+    <script>
+        var topContent = document.getElementById("topContent");
+        function rightScroll(){
+          rightArrow.style.display="none";
+          leftArrow.style.display="inline-block";
+          leftSide.style.display="none";
+          rightSide.style.display="flex";
+        }
+        function leftScroll(){
+          leftArrow.style.display="none";
+          rightArrow.style.display="inline-block";
+          rightSide.style.display="none";
+          leftSide.style.display="flex";
+        }
+    </script>
+
 </body>
+<footer>
+    <br>
+</footer>
 </html>
