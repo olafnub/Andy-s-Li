@@ -6,13 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andy's Li • Youtube</title>
     <link href="youtube.css" rel="stylesheet">
+    <link href="nav.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e5e475af0a.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" id="times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="youtube.html">YOUTUBE</a></li>
+          <li><a href="reddit.html">REDDIT</a></li>
+          <li><a href="">SHOP</a></li>
+          <li><a href="">MORE INFO</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" id="bars" onclick="showMenu()"></i>
+    </nav>
     <input type="radio" name="Photos" id="check1" checked>
     <input type="radio" name="Photos" id="check2">
     <input type="radio" name="Photos" id="check3">
     <input type="radio" name="Photos" id="check4">
+    <input type="radio" name="Photos" id="check5">
+
 
     <div class="container">
         <h1>Y O U T U B E</h1>
@@ -26,9 +41,13 @@
              </div>
             <i class="fa fa-arrow-right" onClick="rightScroll()" id="rightArrow"></i>
             <div class="right-side" id="rightSide">
-            <label class="random-class" for="check4">Random</label>
+            <label for="check4">Random Videos</label>
+            <label for="check5">Self Care Videos</label>
+
             </div>
         </div>
+
+        
         <!--Card-->
     <div class="youtube-gallery">
         <div class="youtube random">
@@ -68,34 +87,50 @@
             <p>Inflation</p>
         </div>
         <!--Card-->
-        <div class="youtube random">
+        <div class="youtube finance">
             <h3>Random</h3>
-            <iframe src="https://www.youtube.com/embed/U-CujW5OlW0" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-             encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>How this page was made</p>
+            <iframe src="https://www.youtube.com/embed/AErS1eyHzzw" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>"What is Inflation?"</p>
         </div>
         <!--Card-->
-        <div class="youtube random">
-            <h3>Random</h3>
-            <iframe src="https://www.youtube.com/embed/U-CujW5OlW0" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-             encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>How this page was made</p>
+        <div class="youtube self">
+            <h3>Self Care</h3>
+            <iframe src="https://www.youtube.com/embed/l2gvqS6C3r4" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+             gyroscope; picture-in-picture" allowfullscreen></iframe>
+             <p>How to Clean Up your Mac</p>
         </div>
         <!--Card-->
-        <div class="youtube random">
-            <h3>Random</h3>
-            <iframe src="https://www.youtube.com/embed/U-CujW5OlW0" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-             encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p>How this page was made</p>
+        <div class="youtube self">
+            <h3>Self Care</h3>
+            <iframe src="https://www.youtube.com/embed/_2AhMU1FJfc" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>"SpotLight Effect / How to not care"</p>
         </div>
         <!--Card-->
     </div>    
     </div>
 
     <script>
+        {
+        const navLinks = document.querySelector(".nav-links");
+        let lastScrollY = window.ScrollY;
+
+        window.addEventListener("scroll", () => {
+            if (lastScrollY < window.scrollY) {
+               navLinks.classList.add("nav--hidden");
+            }
+            else {
+               navLinks.classList.remove("nav--hidden");
+            }
+
+            lastScrollY = window.scrollY;
+        });
+        }
+
         var topContent = document.getElementById("topContent");
         function rightScroll(){
           rightArrow.style.display="none";
@@ -108,6 +143,15 @@
           rightArrow.style.display="inline-block";
           rightSide.style.display="none";
           leftSide.style.display="flex";
+        }
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+        navLinks.style.display="inline-block";
+        navLinks.style.right = "0";
+        // navLinks.style.overflow="hidden";
+        }
+        function hideMenu(){
+        navLinks.style.display="none";
         }
     </script>
 
