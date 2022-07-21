@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-family: "Poppins";
 }
-.container .top-content .fa {
+.container .top-content .fa, nav .fa {
     display: none;
 }
 input {
@@ -45,7 +45,7 @@ h1::before {
         width:100px;
     }
 }
-.top-content, .left-side, .random-class {
+.top-content, .left-side, .random-class, .right-side {
     background-color: lightcoral;
     width: 90%;
     margin: 0 auto 20px auto;
@@ -53,10 +53,10 @@ h1::before {
     display: flex;
     align-items: center;
     border-radius: 5px;
-    /* box-shadow: 3px 3px 5px lightgray; */
+    box-shadow: 3px 3px 5px lightgray;
 
 }
-.left-side, .random-class {
+.left-side, .right-side {
     margin: 20px auto 20px 10px;
 }
 .top-content h3 {
@@ -130,9 +130,10 @@ and (max-device-width : 1605px)  {
     transition: .5s;
 }
 #check2:checked ~ .container .youtube-gallery .finance, 
-#check2:checked ~ .container .youtube-gallery .random{
+#check2:checked ~ .container .youtube-gallery .random,
+#check2:checked ~ .container .youtube-gallery .self {
     opacity: 0;
-    transform:scale(0);
+    transform: scale(0);
     position: absolute;
     transition: 0.5s;
 }
@@ -143,7 +144,8 @@ and (max-device-width : 1605px)  {
     transition: .5s;
 }
 #check3:checked ~ .container .youtube-gallery .lofi,
-#check3:checked ~ .container .youtube-gallery .random {
+#check3:checked ~ .container .youtube-gallery .random,
+#check3:checked ~ .container .youtube-gallery .self  {
     opacity: 0;
     transform: scale(0);
     position: absolute;
@@ -156,11 +158,26 @@ and (max-device-width : 1605px)  {
     transition: .5s;
 }
 #check4:checked ~ .container .youtube-gallery .lofi,
-#check4:checked ~ .container .youtube-gallery .finance {
+#check4:checked ~ .container .youtube-gallery .finance,
+#check4:checked ~ .container .youtube-gallery .self  {
     opacity: 0;
     transform: scale(0);
     position: absolute;
     transition: 0.5s;
+}
+#check5:checked ~ .container .youtube-gallery .self {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    transition: 0.5s;
+}
+#check5:checked ~ .container .youtube-gallery .lofi,
+#check5:checked ~ .container .youtube-gallery .random,
+#check5:checked ~ .container .youtube-gallery .finance {
+    opacity: 0;
+    transform: scale(0);
+    position:absolute;
+    transition:0.5s;
 }
 
 @media screen and (max-width: 750px){
@@ -196,32 +213,3 @@ and (max-device-width : 1605px)  {
     }
     
 }  
-
-/* .youtube-list {
-    background-color: yellow;
-   
-} */
-.card {
-    background-color: red;
-    padding: 1em;
-    max-width: 700px;
-    display: inline-block;
-    border-radius: 100px;
-}
-.card h3 {
-    padding: 3vh;
-    border-radius: 10px;
-
-}
-/* iframe {
-    max-width: 100%;
-    align-content: center;
-    border-style:none;
-} */
-/* @media(max-width:768px){
-    .card {
-        float:left;
-        width:90%;
-margin-right:5px;
-    }
-} */
