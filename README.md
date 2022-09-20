@@ -1,4 +1,6 @@
 # Andy-s-Li | Personal Website Project
-screech, starbucks edit, plus caribou
-
+screech... starbucks editing, plus caribou
 & also florida, Enjoy!
+
+Sharing informational & entertainment videos on youtube, and some reddit
+
